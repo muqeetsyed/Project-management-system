@@ -16,31 +16,31 @@ class Employees
     #[ORM\Column]
     private ?int $code;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 100)]
     private ?string $firstname;
 
-    #[ORM\Column(length: 50, nullable: true)]
+    #[ORM\Column(length: 100, nullable: true)]
     private ?string $middlename = null;
 
-    #[ORM\Column(length: 50, nullable: true)]
+    #[ORM\Column(length: 100, nullable: true)]
     private ?string $lastname = null;
 
     #[ORM\Column(length: 50)]
     private ?string $gender;
 
-    #[ORM\Column(length: 50)]
-    private ?string $department = null;
+    #[ORM\Column(length: 100)]
+    private ?string $department;
 
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $position = null;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(length: 250)]
     private ?string $email;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 250)]
     private ?string $password;
 
-    #[ORM\Column(length: 100, nullable: true)]
+    #[ORM\Column(length: 250, nullable: true)]
     private ?string $avatar = null;
 
     #[ORM\Column(length: 20)]

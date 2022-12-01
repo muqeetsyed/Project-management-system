@@ -27,4 +27,19 @@ class EmployeesTest extends TestCase
         self::assertSame('max#secret', $employee->getPassword());
         self::assertSame('active', $employee->getStatus());
     }
+
+    public function test_construct_function_should_not_be_accessible(): void
+    {
+        $this->expectException(\Error::class);
+
+        $test = new Employees(
+            code: 100,
+            firstname: 'max',
+            gender: 'male',
+            department: 'Quality Assurance',
+            email: 'max@yahoo.in',
+            password: 'max#secret',
+            status: 'active'
+        );
+    }
 }
