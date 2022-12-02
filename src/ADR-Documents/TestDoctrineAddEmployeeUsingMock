@@ -1,0 +1,11 @@
+# 3. Add Mock to test for adding new email
+
+Date: 2022-12-02
+
+##status
+Approved
+
+Here we use concept of mock to test doctrine adding new email and find the new email
+
+Here we don't need an extra setup to test whether data gets saved in the database, with mock
+we stimulate the doctrine repositories i.e not using actual repositories.

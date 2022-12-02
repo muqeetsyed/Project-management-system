@@ -22,7 +22,7 @@ class EmployeeContract implements \App\Model\Contract\EmployeeContract
         // TODO: Implement removeEmployee() method.
     }
 
-    public function updateEmployeeDetails(Employee $oldDetails, Emplyess $newDetails): Employee
+    public function updateEmployeeDetails(Employee $oldDetails, Employee $newDetails): Employee
     {
         // TODO: Implement updateEmployeeDetails() method.
     }
