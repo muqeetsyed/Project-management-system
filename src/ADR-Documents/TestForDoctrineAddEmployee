@@ -1,0 +1,35 @@
+# 2. Add Fixtures to test for adding new email in the database
+
+Date: 2022-12-02
+
+##status
+Approved
+
+#context
+Added .env.test.local env
+ - added database in a variable
+Run `php bin/console --env=test doctrine:database:create` to create test database
+To create tables run command `php bin/console --env=test doctrine:schema:create`
+
+In order to make test database unEffective i.e say if one test case modifies the contents of the database
+then for the other one it should be in it's original state not in modified state.To do that use a bundle namely
+DAMADoctrineTestBundle link: `https://github.com/dmaicher/doctrine-test-bundle`, run
+composer require --dev dama/doctrine-test-bundle
+
+Then we enabled this in the phpunit configuration file by adding
+    <extensions>
+        <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension"/>
+    </extensions>
+
+We also used a library named fixtures, that is used for runing database related test cases i.e
+rather using production data for testing purpose we use data called fixture data that is
+provided by the fixture library of Doctrine.
+To do that we execute the command : composer require --dev doctrine/doctrine-fixtures-bundle
+
+Create a fixture by running: php bin/console make:fixtures
+
+
+## conclusion
+
+This ensures us the all the data type of database column and properties of entity are of same type.
+And database connectivity is Good, data gets saved properly into the database using doctrine.
