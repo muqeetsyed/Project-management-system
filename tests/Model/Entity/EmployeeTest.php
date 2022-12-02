@@ -2,14 +2,14 @@
 
 namespace App\Tests\Model\Entity;
 
-use App\Model\Entity\Employees;
+use App\Model\Entity\Employee;
 use PHPUnit\Framework\TestCase;
 
-class EmployeesTest extends TestCase
+class EmployeeTest extends TestCase
 {
     public function test_add_detials_of_new_employee(): void
     {
-        $employee = Employees::AddNewEmployee(
+        $employee = Employee::AddNewEmployee(
             code: 100,
             firstname: 'max',
             gender: 'male',
@@ -32,7 +32,7 @@ class EmployeesTest extends TestCase
     {
         $this->expectException(\Error::class);
 
-        $test = new Employees(
+        $test = new Employee(
             code: 100,
             firstname: 'max',
             gender: 'male',

@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Model\Entity\Employees;
+use App\Model\Entity\Employee;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Employees>
+ * @extends ServiceEntityRepository<Employee>
  *
- * @method Employees|null find($id, $lockMode = null, $lockVersion = null)
- * @method Employees|null findOneBy(array $criteria, array $orderBy = null)
- * @method Employees[]    findAll()
- * @method Employees[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Employee|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Employee|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Employee[]    findAll()
+ * @method Employee[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class EmployeesRepository extends ServiceEntityRepository
+class EmployeeRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Employees::class);
+        parent::__construct($registry, Employee::class);
     }
 
-    public function save(Employees $entity, bool $flush = false): void
+    public function save(Employee $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class EmployeesRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Employees $entity, bool $flush = false): void
+    public function remove(Employee $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 

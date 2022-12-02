@@ -1,0 +1,18 @@
+# Add Unit Test For Adding New Employee Use Case
+
+Date: 2022-12-02
+
+## Status
+Accepted
+
+##Context
+
+Added PhpUnit Test to for  AddEmployee UseCase
+
+##Decision
+
+To avoid manual testing, hence bugging mostly that occurs on production env
+
+##conclusion
+
+This test helped us to know, what requirements we need to add new employee
