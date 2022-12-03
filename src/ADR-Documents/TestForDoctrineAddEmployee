@@ -28,6 +28,8 @@ To do that we execute the command : composer require --dev doctrine/doctrine-fix
 
 Create a fixture by running: php bin/console make:fixtures
 
+to load: symfony console doctrine:fixtures:load
+
 
 ## conclusion
 
