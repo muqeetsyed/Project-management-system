@@ -2,6 +2,8 @@
 
 namespace App\UseCase\AddEmployee;
 
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 final class Employee
 {
     public function __construct(
@@ -11,7 +13,11 @@ final class Employee
         public string $gender,
         public string $email,
         public string $password,
-        public string $status
+        public string $status,
+        public ?string $middleName = null,
+        public ?string $lastName = null,
+        public ?string $position = null,
+        public ?UploadedFile $avatar = null,
     )
     {
     }
@@ -23,7 +29,11 @@ final class Employee
         string $department,
         string $email,
         string $password,
-        string $status
+        string $status,
+        ?string $middleName = null,
+        ?string $lastName = null,
+        ?string $position = null,
+        ?UploadedFile $avatar = null,
     ): self
     {
         return new self(
@@ -33,7 +43,11 @@ final class Employee
             $gender,
             $email,
             $password,
-            $status
+            $status,
+            $middleName,
+            $lastName,
+            $position,
+            $avatar
         );
     }
 }

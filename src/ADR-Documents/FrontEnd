@@ -1,0 +1,5 @@
+# 4. Added Front end code for Adding New Employee
+
+Install react with a separate directory namely 'frontend', with command 'npm create-react-app frontend'
+
+Where we did form validation,password generator etc in react
